@@ -5,6 +5,8 @@ menu = """
                         [e] - Extrato
                         [q] - Sair
 ===================================================================
+
+                | INSIRA O DÍGITO DA TRANSAÇÃO DESEJADA |
 """
 
 saldo = 0
@@ -17,6 +19,7 @@ while True:
     opcao  = input(menu)
 
     if opcao == "d":
+        print("| OPÇÃO SELECIONADA: DEPÓSITO |")
         valor = float(input("Informe o valor a ser depositado: "))
 
         if valor > 0:
@@ -28,7 +31,7 @@ while True:
             print("Operação falhou: O valor informado é inválido.")
     
     elif opcao == "s":
-
+        print("| OPÇÃO SELECIONADA: SAQUE |")
         valor = float(input("Informe o valor de saque: "))
 
         excedeu_saldo = valor > limite
@@ -59,7 +62,7 @@ while True:
         print("=====================================================================")
 
     elif opcao == "q":
-        print("Transação encerrada.")
+        print("============================== TRANSAÇÃO ENCERRADA ==============================")
         break
     
     else:
