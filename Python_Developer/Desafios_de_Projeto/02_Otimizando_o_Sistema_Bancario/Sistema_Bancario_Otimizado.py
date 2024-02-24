@@ -45,7 +45,7 @@ def saque(*, saldo, valor, extrato, limite, numero_saques, limite_saques):
         saldo -= valor
         extrato += f'Saque:\t\tR$ {valor:.2f}\n'
         numero_saques += 1
-        print('Saque realizado com sucesso !')
+        print('Saque realizado com sucesso!')
 
     else:
         print('\n Operação falhou! O valor informado é inválido.')
@@ -64,16 +64,16 @@ def criar_usuario(usuarios):
     usuario = filtrar_usuarios(cpf, usuarios)
 
     if usuario:
-        print('Ja existe usuario com esse CPF: ')
+        print('Já existe usuário com esse CPF: ')
         return
     
     nome = input('Informe o nome completo: ')
     data_nascimento = input('Informe a data de nascimento (dd-mm-aaaa): ')
-    endereco = input('Informe o endereço (logradouro, N - bairro - cidade/ sigla estado)')
+    endereco = input('Informe o endereço (logradouro, N - bairro - cidade/ sigla estado): ')
 
     usuarios.append({'nome': nome, 'data_nascimento': data_nascimento, 'cpf': cpf, 'endereco': endereco})
 
-    print('Usuario registrado com sucesso !')
+    print('Usuario registrado com sucesso!')
 
 def filtrar_usuarios(cpf, usuarios):
 
@@ -89,7 +89,7 @@ def criar_conta(agencia, numero_conta, usuarios):
         print('\n Conta criada com sucesso!')
         return {'agencia': agencia, 'numero_conta': numero_conta, 'usuario': usuario}
 
-    print('\n Usuario não encontrado, fuluxo de criação de conta encerrado: ')
+    print('\n Usuario não encontrado, fluxo de criação de conta encerrado: ')
     return None
 
 
@@ -156,6 +156,6 @@ def main():
             break
 
         else:
-            print('Opção invalida, por favor selicione novamente um opção válida.')
+            print('Opção inválida, por favor selicione novamente um opção válida.')
 
 main()
